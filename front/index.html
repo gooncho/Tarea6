@@ -1,11 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DentalCare</title>
+  <link rel="stylesheet" href="dist/CSS/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-    
+
+ <nav class="menu">
+  <div class="logo_contenedor">
+    <span class="logo_icono">✦</span>
+    <div class="encabezado_titulo">
+      <h1>DentalCare</h1>
+    </div>
+  </div>
+  <ul class="menu_links">
+    <li><a href="index.html" class="activo">Inicio</a></li>
+    <li><a href="dist/paginas/MisAgendas.html">Soy Paciente</a></li>
+    <li><a href="dist/paginas/PanelControlHorarios.html">Soy Admin</a></li>
+  </ul>
+</nav>
+
+  <div class="container py-5">
+
+    <div class="p-5 mb-4 bg-dark text-white rounded text-center">
+      <h1>Tu salud dental, nuestra prioridad</h1>
+      <p class="lead">Agendá tu cita de forma rápida y sencilla.</p>
+    </div>
+
+    <h4 class="mb-3">Novedades de la Clínica</h4>
+    <div class="row g-3 mb-5">
+      <div class="col-12 col-md-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80" class="card-img-top" alt="Equipos">
+          <div class="card-body">
+            <h5 class="card-title">Nuevos equipos</h5>
+            <p class="card-text">Incorporamos tecnología de punta para el mejor diagnóstico.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&q=80" class="card-img-top" alt="Limpieza">
+          <div class="card-body">
+            <h5 class="card-title">Promoción mayo</h5>
+            <p class="card-text">Descuento especial en limpiezas dentales todo el mes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&q=80" class="card-img-top" alt="Horarios">
+          <div class="card-body">
+            <h5 class="card-title">Horarios extendidos</h5>
+            <p class="card-text">Turnos disponibles hasta las 20:00 hs de lunes a viernes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="mb-3">Accesos</h4>
+    <div class="row g-3">
+      <div class="col-12 col-md-6">
+        <div class="card text-center p-4">
+          <h5>Paciente</h5>
+          <p class="text-muted">Ver mis citas y agendar consultas.</p>
+          <a href="dist/paginas/MisAgendas.html" class="btn btn-dark">Ingresar como Paciente</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card text-center p-4">
+          <h5>Administrador</h5>
+          <p class="text-muted">Gestionar horarios y profesionales.</p>
+          <a href="dist/paginas/PanelControlHorarios.html" class="btn btn-dark">Ingresar como Admin</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    DentalCare © 2025 — Todos los derechos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

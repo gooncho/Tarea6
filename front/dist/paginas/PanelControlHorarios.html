@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DentalCare Admin — Panel de Horarios</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+
+  <nav class="menu">
+    <div class="logo_contenedor">
+      <span class="logo_icono">✦</span>
+      <div class="encabezado_titulo">
+        <h1>DentalCare <span class="badge_admin">Admin</span></h1>
+      </div>
+    </div>
+    <ul class="menu_links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../paginas/PanelControlHorarios.html" class="activo">Panel de Horarios</a></li>
+      <li><a href="../paginas/AltaProfesionales.html">Alta de Profesionales</a></li>
+    </ul>
+  </nav>
+
+  <section class="contenido">
+    <div class="breadcrumb_custom"><a href="../../index.html">Inicio</a> / Panel de Horarios</div>
+
+    <div class="page_header">
+      <h2>Panel de Control de Horarios</h2>
+      <p>Citas agendadas para hoy — lunes 26 de mayo de 2025</p>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-12 col-md-5">
+        <div class="buscador_wrap">
+          <input type="text" class="form-control" id="filtroPaciente" placeholder="Buscar por paciente...">
+        </div>
+      </div>
+      <div class="col-12 col-md-5">
+        <div class="buscador_wrap">
+          <input type="text" class="form-control" id="filtroOdontologo" placeholder="Buscar por odontólogo...">
+        </div>
+      </div>
+    </div>
+
+    <div class="tabla_responsiva table-responsive">
+      <table class="table" id="tablaCitas">
+        <thead>
+          <tr>
+            <th>Hora</th><th>Paciente</th><th>Odontólogo</th><th>Tratamiento</th><th>Estado</th><th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>03:30 AM</td><td>Jimmy Neutron</td><td>Pablo Escobar</td><td>Limpieza dental</td><td><span class="estado estado_aldia">Al día</span></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalGestion">Editar</button>
+              <button class="btn_peligro" data-bs-toggle="modal" data-bs-target="#modalGestion">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>09:00 AM</td><td>María García</td><td>Dra. Ana López</td><td>Ortodoncia — control mensual</td><td><span class="estado estado_confirmado">Confirmado</span></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalGestion">Editar</button>
+              <button class="btn_peligro" data-bs-toggle="modal" data-bs-target="#modalGestion">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>12:12 PM</td><td>Charles Chaplin</td><td>Hanna Arendt</td><td>Endodoncia</td><td><span class="estado estado_vence">Vence hoy</span></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalGestion">Editar</button>
+              <button class="btn_peligro" data-bs-toggle="modal" data-bs-target="#modalGestion">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>15:00 PM</td><td>Lucía Fernández</td><td>Dr. Jorge Fernández</td><td>Revisión general</td><td><span class="estado estado_confirmado">Confirmado</span></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalGestion">Editar</button>
+              <button class="btn_peligro" data-bs-toggle="modal" data-bs-target="#modalGestion">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="modal fade" id="modalGestion" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Gestionar Agenda</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="detalle_fila"><span class="detalle_label">Hora</span><span class="detalle_valor" id="mgHora">—</span></div>
+          <div class="detalle_fila"><span class="detalle_label">Paciente</span><span class="detalle_valor" id="mgPaciente">—</span></div>
+          <div class="detalle_fila"><span class="detalle_label">Odontólogo</span><span class="detalle_valor" id="mgOdontologo">—</span></div>
+          <div class="detalle_fila"><span class="detalle_label">Tratamiento</span><span class="detalle_valor" id="mgTratamiento">—</span></div>
+          <div class="detalle_fila"><span class="detalle_label">Estado</span><span class="detalle_valor" id="mgEstado">—</span></div>
+          <p style="font-size:13px;color:#666;margin-top:16px;margin-bottom:0">¿Qué acción querés realizar sobre esta agenda?</p>
+        </div>
+        <div class="modal-footer gap-2">
+          <button type="button" class="btn_secundario" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn_primario" id="btnModificar">Modificar</button>
+          <button type="button" class="btn_peligro" id="btnEliminar">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-bottom">
+    <p>DentalCare © 2025 — Todos los derechos reservados</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
