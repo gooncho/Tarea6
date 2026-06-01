@@ -451,3 +451,30 @@ section.contenido {
     justify-content: space-between;
     margin-top: 30px;
 }
+.formulario-cita {
+    max-width: 600px;
+}
+
+.modal_icono_check {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.estado_indicador {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.estado_indicador_ok {
+    background-color: #e8f5e9;
+    color: #198754;
+}
+
+.estado_indicador_pend {
+    background-color: #fff3cd;
+    color: #856404;
+}

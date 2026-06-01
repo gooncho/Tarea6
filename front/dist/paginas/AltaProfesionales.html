@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alta de Profesionales — DentalCare</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="menu">
+    <div class="logo_contenedor">
+      <div class="logo_icono">✦</div>
+      <div class="encabezado_titulo">
+        <h1>DentalCare <div class="badge_admin">Admin</div></h1>
+      </div>
+    </div>
+    <ul class="menu_links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../paginas/PanelControlHorarios.html">Panel de Horarios</a></li>
+      <li><a href="../paginas/AltaProfesionales.html" class="activo">Alta de Profesionales</a></li>
+    </ul>
+  </nav>
+
+  <section class="contenido">
+    <div class="breadcrumb_custom"><a href="../../index.html">Inicio</a> / Alta de Profesionales</div>
+
+    <div class="page_header">
+      <h2>Registrar Nuevo Odontólogo</h2>
+      <p>Completá los datos para dar de alta un profesional en la clínica.</p>
+    </div>
+
+    <div class="formulario-cita p-4">
+      <div class="mb-3">
+        <label class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" placeholder="Ej: Pablo López">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Matrícula profesional</label>
+        <input type="text" class="form-control" placeholder="Ej: 12345">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Especialidad</label>
+        <select class="form-select">
+          <option>Ortodoncia</option>
+          <option>Medicina General</option>
+          <option>Implantes</option>
+          <option>Odontología general</option>
+          <option>Pediatra</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Teléfono de contacto</label>
+        <input type="tel" class="form-control" placeholder="Ej: +598 92 999 999">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="Ej: pablo.lopez@gmail.com">
+      </div>
+      <div class="mb-4">
+        <label class="form-label">Días de atención</label>
+        <div class="dias-atencion">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="diaLunes" checked>
+            <label class="form-check-label" for="diaLunes">Lunes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="diaMartes" checked>
+            <label class="form-check-label" for="diaMartes">Martes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="diaMiercoles">
+            <label class="form-check-label" for="diaMiercoles">Miércoles</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="diaJueves">
+            <label class="form-check-label" for="diaJueves">Jueves</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="diaViernes">
+            <label class="form-check-label" for="diaViernes">Viernes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="diaSabado">
+            <label class="form-check-label" for="diaSabado">Sábado</label>
+          </div>
+        </div>
+      </div>
+      <div class="acciones-formulario">
+        <a href="PanelControlHorarios.html" class="btn_secundario">Cancelar</a>
+        <button class="btn_primario" data-bs-toggle="modal" data-bs-target="#modalAltaProfesional">Registrar Profesional</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="modalAltaProfesional" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Profesional Registrado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <div class="modal_icono_check">✔</div>
+          <h5>¡El profesional fue registrado correctamente!</h5>
+          <p class="text-muted">Ya podés asignarle horarios desde el Panel de Horarios.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn_secundario" data-bs-dismiss="modal">Continuar</button>
+          <a href="PanelControlHorarios.html" class="btn_primario">Ir al Panel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-bottom">
+    <p>DentalCare © 2025 — Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

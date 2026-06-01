@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis Citas — DentalCare</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="menu">
+    <div class="logo_contenedor">
+      <div class="logo_icono">✦</div>
+      <div class="encabezado_titulo">
+        <h1>DentalCare <div class="badge_admin">Paciente</div></h1>
+      </div>
+    </div>
+    <ul class="menu_links">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="../paginas/MisAgendas.html" class="activo">Mis Citas</a></li>
+      <li><a href="../paginas/AgendarCitas.html">Agendar Cita</a></li>
+    </ul>
+  </nav>
+
+  <section class="contenido">
+    <div class="breadcrumb_custom"><a href="../../index.html">Inicio</a> / Mis Citas</div>
+
+    <div class="page_header">
+      <h2>Mis Citas</h2>
+      <p>Historial de consultas agendadas — Juan Pérez</p>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-12 col-md-5">
+        <div class="buscador_wrap">
+          <input type="text" class="form-control" placeholder="Buscar por tratamiento...">
+        </div>
+      </div>
+    </div>
+
+    <div class="tabla_responsiva table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Fecha</th><th>Hora</th><th>Odontólogo</th><th>Tratamiento</th><th>Estado</th><th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>26/05/2025</td><td>09:00 AM</td><td>Dra. Ana López</td><td>Ortodoncia — control mensual</td>
+            <td><div class="estado estado_confirmado">Completada</div></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalDetalle">Ver detalle</button>
+              <div class="estado_indicador estado_indicador_ok">✔ Completada</div>
+            </td>
+          </tr>
+          <tr>
+            <td>02/06/2025</td><td>10:30 AM</td><td>Dr. Jorge Fernández</td><td>Endodoncia</td>
+            <td><div class="estado estado_vence">Pendiente</div></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalDetalle">Ver detalle</button>
+              <div class="estado_indicador estado_indicador_pend">⏳ Pendiente</div>
+            </td>
+          </tr>
+          <tr>
+            <td>15/05/2025</td><td>03:30 PM</td><td>Dr. Martín Ruiz</td><td>Limpieza dental</td>
+            <td><div class="estado estado_confirmado">Completada</div></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalDetalle">Ver detalle</button>
+              <div class="estado_indicador estado_indicador_ok">✔ Completada</div>
+            </td>
+          </tr>
+          <tr>
+            <td>10/06/2025</td><td>11:00 AM</td><td>Dra. Ana López</td><td>Revisión general</td>
+            <td><div class="estado estado_vence">Pendiente</div></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalDetalle">Ver detalle</button>
+              <div class="estado_indicador estado_indicador_pend">⏳ Pendiente</div>
+            </td>
+          </tr>
+          <tr>
+            <td>01/04/2025</td><td>02:00 PM</td><td>Dr. Jorge Fernández</td><td>Implantes — evaluación</td>
+            <td><div class="estado estado_confirmado">Completada</div></td>
+            <td class="text-center">
+              <button class="btn_accion me-1" data-bs-toggle="modal" data-bs-target="#modalDetalle">Ver detalle</button>
+              <div class="estado_indicador estado_indicador_ok">✔ Completada</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="modal fade" id="modalDetalle" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalle de Cita</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="detalle_fila"><div class="detalle_label">Fecha</div><div class="detalle_valor">02/06/2025</div></div>
+          <div class="detalle_fila"><div class="detalle_label">Hora</div><div class="detalle_valor">10:30 AM</div></div>
+          <div class="detalle_fila"><div class="detalle_label">Odontólogo</div><div class="detalle_valor">Dr. Jorge Fernández</div></div>
+          <div class="detalle_fila"><div class="detalle_label">Especialidad</div><div class="detalle_valor">Endodoncia</div></div>
+          <div class="detalle_fila"><div class="detalle_label">Tratamiento</div><div class="detalle_valor">Endodoncia</div></div>
+          <div class="detalle_fila"><div class="detalle_label">Estado</div><div class="detalle_valor">Pendiente</div></div>
+          <div class="detalle_fila"><div class="detalle_label">Consultorio</div><div class="detalle_valor">N° 3 — Piso 1</div></div>
+          <div class="detalle_fila"><div class="detalle_label">Notas</div><div class="detalle_valor">Traer radiografías previas</div></div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn_secundario" data-bs-dismiss="modal">Cerrar</button>
+          <a href="AgendarCitas.html" class="btn_primario">Agendar nueva cita</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-bottom">
+    <p>DentalCare © 2025 — Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
